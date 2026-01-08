@@ -1,6 +1,6 @@
-{% set python_min = '3.10' %}
+{% set python_min = "3.10" %}
 {% set name = "xarray-safe-rcm" %}
-{% set version = "2024.11.0" %}
+{% set version = "2026.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,11 +8,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: b29f2b6986eaabb53b3fef09db14af1e2c915a451e26fe4156bd6b813d727424
+  sha256: a8ce9e7dec639cf3d4306b714e52d266648fe93eba721afc52b4b2efde5c4bdc
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
   noarch: python
 
 requirements:
